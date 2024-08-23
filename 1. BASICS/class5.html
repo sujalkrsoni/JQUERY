@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(()=>{
+            $("button").click(e=>{
+                $.ajax({
+                    method : "get",
+                    url : "../data/ticket.jsondf",
+                    success : (ticket)=>{
+                        $(`<dl>
+                                <dt>Name</dt>
+                                <dd>${ticket.name}</dd>
+                                <dt>Departure From</dt>
+                                <dd>${ticket.departure}</dd>
+                                <dt>Arrival At</dt>
+                                <dd>${ticket.source}</dd>
+                                <dt>Destination</dt>
+                                <dd>${ticket.destination}</dd>
+                                <dt>Status</dt>
+                                <dd>${ticket.status}</dd>
+                        </dl> `).appendTo("#container")
+                    }
+                })
+            })
+        })
+        .ajaxStart(()=>{
+            setTimeout(()=>{
+                $("p").html("You requested for ticket")
+            },10)
+        })
+        .ajaxSend(()=>{
+            setTimeout(()=>{
+                $("p").html("You send")
+            },2000)
+        })
+        .ajaxComplete(()=>{
+            setTimeout(()=>{
+                $("p").html("You compelte")
+            },5000)
+        })
+        .ajaxSuccess(()=>{
+            setTimeout(()=>{
+                $("p").html("You success")
+            },8000)
+        })
+        .ajaxStop(()=>{
+            setTimeout(()=>{
+                $("p").html("You stop")
+                $("#container").css("display", "block")
+            },10000)
+        })
+        .ajaxError(()=>{
+            alert("error")
+            $("p").html(" ")
+        })
+    </script>
+</head>
+<body>
+    <button>Book Ticket</button>
+    <p></p>
+    <div id="container" style="display: none;">
+
+    </div>
+
+   
+</body>
+</html>

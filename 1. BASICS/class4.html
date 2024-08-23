@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        function loadContent(url){
+            $("main").html("")
+            $.ajax({
+                method : "get",
+                url : url,
+                success : (content)=>{
+                    $("main").append(content)
+                }
+            })
+        }
+
+
+        $(()=>{
+            $("button").click((e)=>{
+                switch(e.target.value){
+                    case 'hotel' :
+                        loadContent('../../JAVASCRIPT/13. Operator/Hotel-reg-form.html')
+                        break;
+                    case "emi" : 
+                        loadContent("../../JAVASCRIPT/1-6 basics/5. emiCalculator.html")
+                        break;
+                    case "bmi" : 
+                        loadContent('../../JAVASCRIPT/1-6 basics/5.1 BMI Calculator.html')
+                        break;
+                    case 'kfc' : 
+                        loadContent('../../JAVASCRIPT/13. Operator/kfc-online-accordian.html')
+                }
+            })
+        })
+    </script>
+</head>
+<body class="container-fluid">
+    <header style="position: sticky;">
+        <h3>My Projects</h3>
+        <nav class="btn-toolbar bg-danger">
+            <button value="hotel" class="btn btn-danger">Hotel</button>
+            <button value="emi" class="btn btn-danger">Emi calculator</button>
+            <button value="bmi" class="btn btn-danger">BMI Calculator</button>
+            <button value="kfc" class="btn btn-danger">KFC online</button>
+        </nav>
+    </header>
+    <main>
+        
+    </main>
+</body>
+</html>

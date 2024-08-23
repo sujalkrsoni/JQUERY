@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery-ean13/dist/jquery-ean13.js"></script>
+    <script>
+        $(()=>{
+            $("#code").EAN13("7878687867665");
+        })
+    </script>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl-B2hy6lo8UU2CFgdwZv_z6LdIjrO5OCEyQ&s" width="300" height="300" alt="">
+    <br>
+    <canvas id="code" width="300" height="100px"></canvas>
+    
+</body>
+</html>

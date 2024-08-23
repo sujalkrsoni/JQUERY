@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/jquery-ui/jquery-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery-ui/jquery-ui.js"></script>
+    <script>
+        $(()=>{
+            // jquery widgets
+            
+            $("#faqs").accordion()
+            $("#alert").dialog()
+        })
+    </script>
+</head>
+<body>
+    <div id="alert" title="JQuery Loaded !">
+        <p>This is dialog box .</p>
+    </div>
+    <h1 align="center">frequently Asked Questions</h1>
+    <div id="faqs">
+        <h1>What is Netflix</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptate beatae dicta laudantium ullam, modi nam suscipit optio animi impedit.</p>
+        <h1>How much the cost of netflix</h1>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae maiores voluptas libero magnam dolore aspernatur neque, aliquid itaque nulla ipsam quibusdam ab voluptate cupiditate expedita? Deserunt earum voluptas enim reprehenderit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sit consequuntur a unde error cum sint distinctio qui corporis, dolorem quas iure totam labore eligendi sequi dicta voluptate ullam ipsa?</p>
+        </div>
+    </div>
+</body>
+</html>
