@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/jquery-ui/jquery-ui.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery-ui/jquery-ui.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        $(()=>{
+            $("button").click((e)=>{
+                $.cookie("username",$("#userName").val(),{expires : 2})
+                location.href = "class11-cookie-home.html"
+            })
+        })
+    </script>
+</head>
+<body>
+     <h2>Login</h2>
+     <input type="text" id="userName" placeholder="Enter Username">
+     <button>Submit</button>
+</body>
+</html>

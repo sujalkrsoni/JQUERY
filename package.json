@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "jquery": "^3.7.1",
     "jquery-ean13": "^2.2.5",
+    "jquery.cookie": "^1.4.1",
     "jsgrid": "^1.5.3"
   },
   "name": "jquery",
